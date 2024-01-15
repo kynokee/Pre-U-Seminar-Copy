@@ -1,29 +1,89 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Welcome</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .container {
-            max-width: 400px;
-            margin: 100px auto;
-            padding: 30px;
-            border-radius: 5px;
-            background-color: white;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-    </style>
+  <title>Soft Skills</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    table {
+      width: 300px;
+      border-collapse: separate; /* Changed border-collapse value */
+      border-spacing: 10px; /* Added border-spacing property */
+    }
+
+    td {
+      padding: 10px;
+      text-align: center;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .popup {
+      visibility: hidden;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      font-size: 14px;
+      border-radius: 4px;
+      padding: 10px;
+      position: absolute;
+      top: -120%;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      z-index: 9999;
+    }
+
+    td:hover .popup {
+      visibility: visible;
+      top: -140%;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Welcome, {{ name }}!</h1>
-    </div>
+  <header>
+    <h1>Pick your soft skill</h1>
+    <hr>
+  </header>
+
+  <main>
+    <table>
+      <tr>
+        <td onclick="window.location.href = '/creativity';">
+          Creative Thinking
+          <span class="popup">Creative thinking is the ability to come up with unique, original solutions, making it a valuable and marketable soft skill in a wide variety of careers.</span>
+        </td>
+        <td onclick="window.location.href = '/problemsolving';">
+          Problem Solving
+          <span class="popup">Problem solving is the act of defining a problem; determining the cause of the problem; identifying, prioritizing, and selecting alternatives for a solution; and implementing a solution. </span>
+        </td>
+      </tr>
+      <tr>
+        <td onclick="window.location.href = '/comms';">
+          Communication Skills
+          <span class="popup">Communication skills are what we use to connect with others, whether we're speaking in a conversation with them or writing to them an email. In the workplace, communication skills help you collaborate with team members, share information, and problem-solve efficiently</span>
+        </td>
+        <td onclick="window.location.href = '/critical';">
+          Critical Thinking
+          <span class="popup">Critical thinking is the analysis of available facts, evidence, observations, and arguments in order to form a judgement by the application of rational, skeptical, and unbiased analyses and evaluation.</span>
+        </td>
+      </tr>
+    </table>
+  </main>
+
 </body>
+
 </html>

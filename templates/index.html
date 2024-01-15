@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8"dw>
     <title>Project Adaptibility</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+  
 <body>
+    <img src="https://www.skillsfuture.gov.sg/images/default-source/template/skillsfuturesg_rgb-24-v2.jpg?sfvrsn=ac431521_3/SkillsfutureSG_RGB-24-v2.jpg" href="style.css">
     <header>
-        <h1>Interactive Modern Website</h1>
+        <h1>Student-Expert Portal</h1>
+        <hr>
     </header>
     <main>
         <section class="container">
-            <h2>Welcome!</h2>
+            <h2 align="centre">Welcome!</h2>
             <p>Enter your Student ID:</p>
             <input type="text" id="nameInput" placeholder="Your Name" required>
-            <button id="submitBtn">Submit</button>
+            <button id="submitBtn" onclick="window.location.href = '/page2';">Submit</button>
         </section>
     </main>
-    <script src="script.js"></script>
 
-  <section class="container">
-    {% if message %}
-        <h2>{{ message }}</h2>
-    {% else %}
-        <h2>Welcome!</h2>
-        <p>Enter your name:</p>
-        <form method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <button type="submit">Submit</button>
-        </form>
-    {% endif %}
-</section>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
+  
 </html>

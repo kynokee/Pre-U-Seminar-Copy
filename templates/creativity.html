@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mentors</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href = "{{ url_for('static', filename='style.css') }}"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #9AB7D3;
+    }
+
+    .div {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      color: #333333;
+      margin-bottom: 30px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: left;
+      height: 300px;
+      background-color: #EAEAEA;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    p {
+      text-align: left ;
+      font-size: 24px;
+      color: #666666;
+      margin: 5;
+    }
+
+    .image {
+      padding: 5px;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Mr Sayem</h1>
+    <div class="content">
+      <img src=".././static/Me1.png" height="125" width="125" align="left">
+      <p>Experience: 11 years(Local) Cyber Engineer, 3 years(London) Cyber Specialist<br>
+         Mentorship Commitment: 1-2 months<br>
+         Applications: Open<br><div class="buttons-container">
+  <button class="button-arounder">Apply</button>
+</div></p>
+    </div>
+  </div>
+</body>
+
+</html>
